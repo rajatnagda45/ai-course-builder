@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Course Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>AI Course Builder</h1>
+    <p>Create and preview your custom AI learning course in real time.</p>
+    <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+  </header>
+
+  <main class="container">
+    <!-- Form Section -->
+    <section class="form-section">
+      <h2>Create Course</h2>
+      <form id="courseForm">
+        <label>Course Title</label>
+        <input type="text" id="courseTitle" placeholder="Enter course name" required />
+
+        <label>Description</label>
+        <textarea id="courseDescription" placeholder="Write a short course description"></textarea>
+
+        <label>Difficulty</label>
+        <select id="courseLevel">
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+
+        <div class="module-container">
+          <label>Modules</label>
+          <div id="modulesList"></div>
+          <div class="add-module">
+            <input type="text" id="newModule" placeholder="Module name" />
+            <button type="button" id="addModuleBtn">Add</button>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Generate Preview</button>
+      </form>
+    </section>
+
+    <!-- Preview Section -->
+    <section class="preview-section">
+      <h2>Live Preview</h2>
+      <div class="preview-card" id="coursePreview">
+        <h3>Course title will appear here</h3>
+        <p>Description will appear here.</p>
+        <span class="badge">Level</span>
+        <ul id="previewModules"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by <strong>Rajat Nagda</strong> • Frontend Developer 🚀</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
